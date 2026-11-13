@@ -1,4 +1,3 @@
-// Replace this with your actual OMDb API key.
 const API_KEY = "913d3c0c";
 const API_URL = "https://www.omdbapi.com/";
 const FALLBACK_POSTER =
