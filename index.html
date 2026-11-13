@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineScope - Movie Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="logo">Cine<span>Scope.</span></a>
+    <span class="nav-text">YOUR MOVIE DISCOVERY HUB</span>
+  </nav>
+
+  <header class="hero">
+    <div class="tag">✦ DISCOVER YOUR NEXT FAVORITE</div>
+    <h1>Every movie has a story.<br>
+      <span>Find yours.</span>
+    </h1>
+    <p>Explore movies, discover hidden gems, and dive into your
+      favorite films — all in one place.</p>
+
+    <form id="searchForm" class="search-box">
+      <span class="search-icon">⌕</span>
+      <input id="searchInput" type="search"
+        placeholder="Search movies, e.g. Interstellar..." required>
+      <button type="submit" id="searchBtn">Search ↗</button>
+    </form>
+
+    <div class="suggestions">
+      <span>Try:</span>
+      <button class="chip" data-query="Interstellar">Interstellar</button>
+      <button class="chip" data-query="Inception">Inception</button>
+      <button class="chip" data-query="Avengers">Avengers</button>
+      <button class="chip" data-query="The Dark Knight">The Dark Knight</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="section-heading">
+      <div>
+        <h2 id="sectionTitle">Explore Movies</h2>
+        <p id="resultCount">Search to discover your next movie</p>
+      </div>
+
+      <select id="sortSelect" aria-label="Sort movies">
+        <option value="default">Default order</option>
+        <option value="year">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="title">A - Z</option>
+      </select>
+    </div>
+
+    <div class="movie-grid" id="movieGrid">
+      <div class="message">
+        <div class="empty-icon">🎬</div>
+        <h3>Your next movie awaits</h3>
+        <p>Search for a movie above to get started.</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="movieModal">
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn"
+        aria-label="Close details">&times;</button>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made for movie lovers. Movie data powered by OMDb API.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
